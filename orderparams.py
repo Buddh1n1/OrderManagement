@@ -9,6 +9,7 @@ p = [0]*(m+1)
 v = [0]*(m+1)
 k = (t/s)**(1/m)
 v0 = n * (1-c/k) / (1-(c/k)**(m+1))
+
 print(f'How to sell {n} tokens with {M} orders from start price {s} to end price {t} with {c}-growing payout from step to step')
 for i in range(M):
     p[i] = s * (t/s)**(i/m)
