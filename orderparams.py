@@ -1,8 +1,8 @@
-s = 0.5       #startprice
-t = 100     #endprice
+s = 1         #startprice
+t = 100       #endprice
 n = 1000000   #token amount
-M = 10       #ordercount
-c = 1.5     #factor between payouts
+M = 5         #ordercount
+c = 1.5       #factor between payouts
 
 m = M-1
 p = [0]*(m+1)
@@ -13,7 +13,7 @@ print(f'How to sell {n} tokens with {M} orders from start price {s} to end price
 for i in range(M):
     p[i] = s * (t/s)**(i/m)
     v[i] = v0 * (c/k)**i
-    print(f'step {i} - price: {p[i]:.7f} - volume: {v[i]:.1f} - payout: {p[i]*v[i]:.4f}')
+    print(f'step {i} - price: {p[i]:.7f} - volume: {v[i]:.1f} - payout: {p[i]*v[i]:.1f}')
 
 total = sum(p[i]*v[i] for i in range(M))
 print(f'total payout: {total:.1f}')
