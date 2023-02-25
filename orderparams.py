@@ -1,8 +1,8 @@
 s = 1         #startprice
 t = 100       #endprice
 n = 1000000   #token amount
-M = 5         #ordercount
-c = 1.5       #factor between payouts
+M = 6         #ordercount
+c = 2       #factor between payouts
 
 m = M-1
 p = [0]*(m+1)
